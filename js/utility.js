@@ -17,5 +17,3 @@ function donateHistoryShow(
         </div>
     </div>`;
 }
-
-function getDataAndShow(btn, balance) {}
