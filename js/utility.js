@@ -4,7 +4,7 @@ function donateHistoryShow(
   donateHistoryDate
 ) {
   return `
-    <div class="card bg-base-100 w-full border">
+    <div class="w-full border rounded-xl">
         <div class="card-body">
             <h2 class="text-lg">
                 <span id="donateHistoryAmount">${donateHistoryAmount}</span>
