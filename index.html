@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donatio - Home Page</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryColor: "#B4F461",
+              primaryHoverColor: "#95c950",
+              colors: "#111111",
+              bgColor: "#F9F7F3",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header class="pt-5 pb-12 bg-bgColor lg:px-0 px-4">
+      <div class="navbar container mx-auto">
+        <div class="navbar-start">
+          <a
+            class="btn bg-primaryColor px-7 hover:bg-primaryHoverColor text-colors text-xl"
+            >Blog</a
+          >
+        </div>
+        <div
+          class="navbar-center hidden space-x-4 lg:flex flex-row items-center justify-center"
+        >
+          <img src="./assets/logo.png" alt="logo" class="w-12 h-12" />
+          <h1 class="text-2xl font-bold">Donate Bangladesh</h1>
+        </div>
+        <div class="navbar-end space-x-2">
+          <img src="./assets/coin.png" alt="" />
+          <a class="text-xl font-semibold text-color opacity-75">5500 BDT</a>
+        </div>
+      </div>
+    </header>
+    <main></main>
+  </body>
 </html>
