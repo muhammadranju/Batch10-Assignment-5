@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donatio - Home Page</title>
+    <title>Donation - Page</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -29,10 +29,13 @@
     </script>
   </head>
   <body>
-    <header class="pt-5 pb-12 bg-bgColor lg:px-0 px-4">
+    <header
+      class="pt-5 pb-8 bg-bgColor lg:px-0 px-3 sticky top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-50"
+    >
       <div class="navbar container mx-auto">
         <div class="navbar-start">
           <a
+            href="./blog.html"
             class="btn bg-primaryColor px-7 hover:bg-primaryHoverColor text-colors text-xl"
             >Blog</a
           >
@@ -45,10 +48,207 @@
         </div>
         <div class="navbar-end space-x-2">
           <img src="./assets/coin.png" alt="" />
-          <a class="text-xl font-semibold text-color opacity-75">5500 BDT</a>
+          <a class="text-xl font-semibold text-color opacity-75"
+            ><span id="balance">5500</span> BDT</a
+          >
         </div>
+        <!-- Donation and History Section -->
+      </div>
+      <div class="flex flex-row justify-center space-x-4 items-center mt-16">
+        <button
+          class="btn bg-primaryColor px-6 hover:bg-primaryHoverColor text-colors text-xl"
+          id="donationButton"
+        >
+          Donation
+        </button>
+        <button
+          class="btn btn-outline px-6 text-colors text-xl"
+          id="historyButton"
+        >
+          History
+        </button>
       </div>
     </header>
-    <main></main>
+
+    <main class="container mx-auto mt-20 lg:px-0 px-3">
+      <!-- Donation Section -->
+      <!-- all cards -->
+      <div id="cardContainer" class="">
+        <!-- card 1 -->
+        <div class="mt-8 border rounded-xl lg:p-10 p-5">
+          <div class="flex lg:flex-row flex-col justify-between">
+            <figure class="">
+              <img src="./assets/noakhali.png" class="lg:w-[650px]" />
+            </figure>
+            <div class="lg:w-[750px] space-y-4">
+              <button class="btn text-gray-500 lg:mt-0 mt-4">
+                <img src="./assets/coin.png" class="lg:w-7" alt="" />
+                <span id="displayDonateAmount1">0</span> BDT
+              </button>
+
+              <h2 class="card-title font-bold" id="donateTitle1">
+                Donate for Flood at Noakhali, Bangladesh
+              </h2>
+              <p class="text-lg font-light">
+                The recent floods in Noakhali, Bangladesh have devastated
+                countless lives and livelihoods. Homes have been destroyed,
+                crops have been submerged, and infrastructure has been damaged.
+                The situation is dire, and the affected communities urgently
+                need our support. By donating to flood relief efforts, you can
+                make a tangible difference in the lives of those who have been
+                impacted by this natural disaster. Your contribution will help
+                provide essential supplies such as food, water, shelter, and
+                medical care to those in need. It will also support rebuilding
+                efforts and contribute to the long-term recovery of the affected
+                region. Additionally, your donation can help prevent.
+              </p>
+              <input
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered w-full"
+                id="inputAmount1"
+              />
+              <div class="card-actions">
+                <button
+                  class="btn bg-primaryColor text-xl hover:bg-primaryHoverColor w-full"
+                  id="donateBtn1"
+                >
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="mt-8 border rounded-xl lg:p-10 p-6">
+          <div class="flex lg:flex-row flex-col justify-between">
+            <figure class="">
+              <img src="./assets/feni.png" class="lg:w-[650px]" />
+            </figure>
+            <div class="lg:w-[750px] space-y-4">
+              <button class="btn text-gray-500 lg:mt-0 mt-4">
+                <img src="./assets/coin.png" class="lg:w-7" alt="" />
+                <span id="displayDonateAmount2">0</span> BDT
+              </button>
+
+              <h2 class="card-title font-bold" id="donateTitle2">
+                Donate for Flood Relief in Feni,Bangladesh
+              </h2>
+              <p class="text-lg font-light">
+                The recent floods in Feni, Bangladesh have devastated countless
+                lives and livelihoods. Homes have been destroyed, crops have
+                been submerged, and infrastructure has been damaged. The
+                situation is dire, and the affected communities urgently need
+                our support. By donating to flood relief efforts, you can make a
+                tangible difference in the lives of those who have been impacted
+                by this natural disaster. Your contribution will help provide
+                essential supplies such as food, water, shelter, and medical
+                care to those in need. It will also support rebuilding efforts
+                and contribute to the long-term recovery of the affected region.
+                Every donation, no matter the size, can help alleviate suffering
+                and bring hope to a community in crisis. Let us come together to
+                show solidarity with the people of Feni and help them rebuild
+                their lives. Your contribution will help provide essential
+                supplies such as food.
+              </p>
+              <input
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered w-full"
+                id="inputAmount2"
+              />
+              <div class="card-actions">
+                <button
+                  class="btn bg-primaryColor text-xl hover:bg-primaryHoverColor w-full"
+                  id="donateBtn2"
+                >
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="mt-8 border rounded-xl lg:p-10 p-6">
+          <div class="flex lg:flex-row flex-col justify-between">
+            <figure class="">
+              <img src="./assets/quota-protest.png" class="lg:w-[650px]" />
+            </figure>
+            <div class="lg:w-[750px] space-y-4">
+              <button class="btn text-gray-500 lg:mt-0 mt-4">
+                <img src="./assets/coin.png" class="lg:w-7" alt="" />
+                <span id="displayDonateAmount3">0</span> BDT
+              </button>
+
+              <h2 class="card-title font-bold" id="donateTitle3">
+                Aid for Injured in the Quota Movement
+              </h2>
+              <p class="text-lg font-light">
+                The recent Quota Movement, a nationwide protest in Bangladesh
+                demanding a fair quota system for government jobs, has been
+                marked by both peaceful demonstrations and violent clashes. Many
+                individuals, including students, activists, and ordinary
+                citizens, have sustained injuries during these protests. The
+                injuries range from minor bruises to severe wounds, and some
+                individuals have even lost their lives. Providing aid to the
+                injured is a crucial step in supporting the victims of the Quota
+                Movement and ensuring their well-being. Medical assistance,
+                including treatment for injuries, medication, and rehabilitation
+                services, is essential for the recovery of those affected.
+                Additionally, financial assistance can help alleviate the
+                economic burden faced by injured individuals and their families.
+                By providing aid, we can demonstrate solidarity with the victims
+                of the movement and contribute to their physical and emotional
+                healing. Furthermore, supporting the injured can help to raise
+                awareness.
+              </p>
+              <input
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered w-full"
+                id="inputAmount3"
+              />
+              <div class="card-actions">
+                <button
+                  class="btn bg-primaryColor text-xl hover:bg-primaryHoverColor w-full"
+                  id="donateBtn3"
+                >
+                  Donate Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="donateHistory" class="hidden space-y-4"></div>
+    </main>
+
+    <footer class="mt-20 pt-36 bg-bgColor"></footer>
+
+    <!-- onclick="successModal.showModal()" -->
+    <dialog
+      id="successModal"
+      class="modal modal-bottom sm:modal-middle flex justify-center items-center text-center"
+    >
+      <div class="modal-box">
+        <h3 class="text-2xl font-bold">Congrates!</h3>
+        <div class="flex justify-center items-center mt-4 mb-4">
+          <img src="./assets/coin.png" class="w-9" alt="" />
+        </div>
+        <p class="py-4 font-semibold">You Have Donated for Humankind</p>
+        <h4 class="font-bold text-xl">Successfully</h4>
+        <!-- <div class="modal-action"> -->
+        <!-- <button class="btn modal-action">close confirmation</button> -->
+        <form method="dialog" class="mt-5">
+          <button class="btn font-bold">close confirmation</button>
+          <!-- if there is a button in form, it will close the modal -->
+        </form>
+        <!-- </div> -->
+      </div>
+    </dialog>
+
+    <script src="./js/utility.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
