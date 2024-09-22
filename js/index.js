@@ -45,3 +45,33 @@ historyButton.addEventListener("click", function () {
   historyButton.classList.remove("btn-outline");
   historyButton.classList.add("bg-primaryColor", "hover:bg-primaryHoverColor");
 });
+
+donateBtn1.addEventListener("click", function () {
+  const inputAmount1 = parseFloat(id("inputAmount1").value);
+  const displayDonateAmount1 = parseFloat(id("displayDonateAmount1").innerText);
+
+  if (isNaN(inputAmount1)) {
+    alert("Please Enter Valid Amount");
+    return;
+  }
+  if (inputAmount1 <= 0) {
+    alert("Please Enter positive Amount");
+    return;
+  }
+  const newBalance = balance.innerText - inputAmount1;
+  if (newBalance < 0) {
+    alert("Insufficient Balance you can't donate");
+    return;
+  }
+  id("displayDonateAmount1").innerHTML = displayDonateAmount1 + inputAmount1;
+  balance.innerText = newBalance;
+
+  donateHistory.innerHTML += donateHistoryShow(
+    inputAmount1,
+    donateTitle1,
+    new Date().toLocaleString()
+  );
+
+  successModal.showModal();
+  id("inputAmount1").value = "";
+});
