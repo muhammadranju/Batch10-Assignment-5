@@ -12,6 +12,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="shortcut icon" href="./assets/coin.png" type="image/x-icon" />
 
     <script>
       tailwind.config = {
@@ -30,30 +31,32 @@
   </head>
   <body>
     <header
-      class="pt-5 pb-8 bg-bgColor lg:px-0 px-3 sticky top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-50"
+      class="lg:px-0 px-3 pb-8 sticky top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-50"
     >
-      <div class="navbar container mx-auto">
-        <div class="navbar-start">
-          <a
-            href="./blog.html"
-            class="btn bg-primaryColor px-7 hover:bg-primaryHoverColor text-colors text-xl"
-            >Blog</a
+      <nav class="bg-bgColor pt-5 pb-6">
+        <div class="navbar container mx-auto">
+          <div class="navbar-start">
+            <a
+              href="./blog.html"
+              class="btn bg-primaryColor px-7 hover:bg-primaryHoverColor text-colors text-xl"
+              >Blog</a
+            >
+          </div>
+          <div
+            class="navbar-center space-x-4 lg:flex flex-row items-center justify-center"
           >
+            <img src="./assets/logo.png" alt="logo" class="w-12 h-12" />
+            <h1 class="text-2xl font-bold hidden lg:flex">Donate Bangladesh</h1>
+          </div>
+          <div class="navbar-end space-x-2">
+            <img src="./assets/coin.png" alt="" />
+            <a class="text-xl font-semibold text-color opacity-75"
+              ><span id="balance">5500</span> BDT</a
+            >
+          </div>
+          <!-- Donation and History Section -->
         </div>
-        <div
-          class="navbar-center hidden space-x-4 lg:flex flex-row items-center justify-center"
-        >
-          <img src="./assets/logo.png" alt="logo" class="w-12 h-12" />
-          <h1 class="text-2xl font-bold">Donate Bangladesh</h1>
-        </div>
-        <div class="navbar-end space-x-2">
-          <img src="./assets/coin.png" alt="" />
-          <a class="text-xl font-semibold text-color opacity-75"
-            ><span id="balance">5500</span> BDT</a
-          >
-        </div>
-        <!-- Donation and History Section -->
-      </div>
+      </nav>
       <div class="flex flex-row justify-center space-x-4 items-center mt-16">
         <button
           class="btn bg-primaryColor px-6 hover:bg-primaryHoverColor text-colors text-xl"
@@ -73,7 +76,7 @@
     <main class="container mx-auto mt-20 lg:px-0 px-3">
       <!-- Donation Section -->
       <!-- all cards -->
-      <div id="cardContainer" class="">
+      <section id="cardContainer" class="">
         <!-- card 1 -->
         <div class="mt-8 border rounded-xl lg:p-10 p-5">
           <div class="flex lg:flex-row flex-col justify-between">
@@ -219,9 +222,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="donateHistory" class="space-y-4 hidden"></div>
+      <section id="donateHistory" class="space-y-4 hidden"></section>
     </main>
 
     <footer class="mt-20 pt-36 bg-bgColor"></footer>
