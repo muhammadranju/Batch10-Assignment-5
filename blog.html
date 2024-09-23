@@ -28,7 +28,7 @@
       };
     </script>
   </head>
-  <body>
+  <body class="min-h-screen">
     <header
       class="pt-5 pb-8 bg-bgColor lg:px-0 px-3 sticky top-0 w-full backdrop-filter backdrop-blur-lg bg-opacity-50"
     >
@@ -86,24 +86,24 @@
           <div class="collapse-content">
             <ul>
               <li>
-                By ID: Use a method that retrieves an element based on its
+                1: By ID: Use a method that retrieves an element based on its
                 unique ID.
               </li>
               <li>
-                By Class: Use a method that selects all elements with a specific
-                class name.
+                2: By Class: Use a method that selects all elements with a
+                specific class name.
               </li>
               <li>
-                By Tag Name: Use a method that selects all elements with a
+                3: By Tag Name: Use a method that selects all elements with a
                 specific tag name
               </li>
               <li>
-                By CSS Selectors: Use methods that allow selecting elements
+                4: By CSS Selectors: Use methods that allow selecting elements
                 using CSS selectors (e.g., class, id, attributes,
                 pseudo-classes).
               </li>
               <li>
-                By Name: For form elements, select based on their name
+                5: By Name: For form elements, select based on their name
                 attribute.
               </li>
             </ul>
@@ -118,17 +118,17 @@
           <div class="collapse-content">
             <ul>
               <li>
-                Efficiency: Reduces the need to attach multiple event listeners
-                to individual child elements, improving performance, especially
-                with dynamic or large lists of elements.
+                1: Efficiency: Reduces the need to attach multiple event
+                listeners to individual child elements, improving performance,
+                especially with dynamic or large lists of elements.
               </li>
               <li>
-                Dynamic Elements: Works well for elements added to the DOM
+                2: Dynamic Elements: Works well for elements added to the DOM
                 dynamically after the page has loaded, as the parent listener
                 can still handle events from newly created children.
               </li>
               <li>
-                Simpler Code: Centralizes event handling, reducing code
+                3: Simpler Code: Centralizes event handling, reducing code
                 complexity by avoiding multiple event handlers.
               </li>
             </ul>
@@ -143,19 +143,21 @@
           <div class="collapse-content">
             <ul>
               <li>
-                Get an attribute using a method that retrieves it by name.
+                1: Get an attribute using a method that retrieves it by name.
               </li>
               <li>
-                Set an attribute by specifying the attribute name and value.
+                2: Set an attribute by specifying the attribute name and value.
               </li>
               <li>
-                Remove an attribute using a method that takes the attribute name
-                as a parameter.
+                3: Remove an attribute using a method that takes the attribute
+                name as a parameter.
               </li>
             </ul>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="mt-20 pt-36 bg-bgColor sticky top-[100vh]"></footer>
   </body>
 </html>
