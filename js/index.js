@@ -1,23 +1,29 @@
+// Get Element by ID
 function id(id) {
   return document.getElementById(id);
 }
-
+// All Cards Section and Donate History Section
 const cardContainer = id("cardContainer");
 const donateHistory = id("donateHistory");
 
+// Donate Buttons
 const donateBtn1 = id("donateBtn1");
 const donateBtn2 = id("donateBtn2");
 const donateBtn3 = id("donateBtn3");
 
+// Donate Titles
 const donateTitle1 = id("donateTitle1");
 const donateTitle2 = id("donateTitle2");
 const donateTitle3 = id("donateTitle3");
 
+// Balance
 const balance = id("balance");
 
+// Donation and History Buttons
 const donationButton = id("donationButton");
 const historyButton = id("historyButton");
 
+// Donation Button
 donationButton.addEventListener("click", function () {
   donateHistory.classList.add("hidden");
   cardContainer.classList.remove("hidden");
@@ -32,6 +38,7 @@ donationButton.addEventListener("click", function () {
   donationButton.classList.add("bg-primaryColor", "hover:bg-primaryHoverColor");
 });
 
+// History Button
 historyButton.addEventListener("click", function () {
   donateHistory.classList.remove("hidden");
   cardContainer.classList.add("hidden");
@@ -46,6 +53,7 @@ historyButton.addEventListener("click", function () {
   historyButton.classList.add("bg-primaryColor", "hover:bg-primaryHoverColor");
 });
 
+// Add Donate Button 1
 donateBtn1.addEventListener("click", function () {
   const inputAmount1 = parseFloat(id("inputAmount1").value);
   const displayDonateAmount1 = parseFloat(id("displayDonateAmount1").innerText);
@@ -69,13 +77,13 @@ donateBtn1.addEventListener("click", function () {
   donateHistory.innerHTML += donateHistoryShow(
     inputAmount1,
     donateTitle1,
-    new Date().toLocaleString()
+    showDate()
   );
 
   successModal.showModal();
   id("inputAmount1").value = "";
 });
-
+// Add Donate Button 2
 donateBtn2.addEventListener("click", function () {
   const inputAmount2 = parseFloat(id("inputAmount2").value);
   const displayDonateAmount2 = parseFloat(id("displayDonateAmount2").innerText);
@@ -99,13 +107,13 @@ donateBtn2.addEventListener("click", function () {
   donateHistory.innerHTML += donateHistoryShow(
     inputAmount2,
     donateTitle2,
-    new Date().toLocaleString()
+    showDate()
   );
 
   successModal.showModal();
   id("inputAmount2").value = "";
 });
-
+// Add Donate Button 3
 donateBtn3.addEventListener("click", function () {
   const inputAmount3 = parseFloat(id("inputAmount3").value);
   const displayDonateAmount3 = parseFloat(id("displayDonateAmount3").innerText);
@@ -129,7 +137,7 @@ donateBtn3.addEventListener("click", function () {
   donateHistory.innerHTML += donateHistoryShow(
     inputAmount3,
     donateTitle3,
-    new Date().toLocaleString()
+    showDate()
   );
 
   successModal.showModal();

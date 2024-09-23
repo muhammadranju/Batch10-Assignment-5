@@ -17,3 +17,6 @@ function donateHistoryShow(
         </div>
     </div>`;
 }
+function showDate() {
+  return new Date().toLocaleString();
+}
