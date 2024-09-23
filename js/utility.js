@@ -8,7 +8,7 @@ function donateHistoryShow(
         <div class="card-body">
             <h2 class="text-lg">
                 <span id="donateHistoryAmount">${donateHistoryAmount}</span>
-                  Taka is Donated for Donate for
+                  Taka is Donated for
                   <span id="donateHistoryTitle">${donateHistoryTitle.innerText}</span>
             </h2>
             <p class="p-4 bg-slate-100 rounded-xl">Date:
