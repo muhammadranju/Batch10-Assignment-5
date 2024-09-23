@@ -59,8 +59,8 @@ historyButton.addEventListener("click", function () {
 
 // Add Donate Button 1
 donateBtn1.addEventListener("click", function () {
-  const inputAmount1 = parseFloat(id("inputAmount1").value);
-  const displayDonateAmount1 = parseFloat(id("displayDonateAmount1").innerText);
+  const inputAmount1 = Number(id("inputAmount1").value);
+  const displayDonateAmount1 = Number(id("displayDonateAmount1").innerText);
 
   if (isNaN(inputAmount1)) {
     alert("Please Enter Valid Amount");
@@ -90,8 +90,8 @@ donateBtn1.addEventListener("click", function () {
 
 // Add Donate Button 2
 donateBtn2.addEventListener("click", function () {
-  const inputAmount2 = parseFloat(id("inputAmount2").value);
-  const displayDonateAmount2 = parseFloat(id("displayDonateAmount2").innerText);
+  const inputAmount2 = Number(id("inputAmount2").value);
+  const displayDonateAmount2 = Number(id("displayDonateAmount2").innerText);
 
   if (isNaN(inputAmount2)) {
     alert("Please Enter Valid Amount");
@@ -121,8 +121,8 @@ donateBtn2.addEventListener("click", function () {
 
 // Add Donate Button 3
 donateBtn3.addEventListener("click", function () {
-  const inputAmount3 = parseFloat(id("inputAmount3").value);
-  const displayDonateAmount3 = parseFloat(id("displayDonateAmount3").innerText);
+  const inputAmount3 = Number(id("inputAmount3").value);
+  const displayDonateAmount3 = Number(id("displayDonateAmount3").innerText);
 
   if (isNaN(inputAmount3)) {
     alert("Please Enter Valid Amount");
@@ -152,8 +152,8 @@ donateBtn3.addEventListener("click", function () {
 
 // Add Donate Button 4
 donateBtn4.addEventListener("click", function () {
-  const inputAmount4 = parseFloat(id("inputAmount4").value);
-  const displayDonateAmount4 = parseFloat(id("displayDonateAmount4").innerText);
+  const inputAmount4 = Number(id("inputAmount4").value);
+  const displayDonateAmount4 = Number(id("displayDonateAmount4").innerText);
 
   if (isNaN(inputAmount4)) {
     alert("Please Enter Valid Amount");
@@ -183,8 +183,8 @@ donateBtn4.addEventListener("click", function () {
 
 // Add Donate Button 5
 donateBtn5.addEventListener("click", function () {
-  const inputAmount5 = parseFloat(id("inputAmount5").value);
-  const displayDonateAmount5 = parseFloat(id("displayDonateAmount5").innerText);
+  const inputAmount5 = Number(id("inputAmount5").value);
+  const displayDonateAmount5 = Number(id("displayDonateAmount5").innerText);
 
   if (isNaN(inputAmount5)) {
     alert("Please Enter Valid Amount");
