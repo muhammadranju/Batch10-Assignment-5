@@ -10,11 +10,15 @@ const donateHistory = id("donateHistory");
 const donateBtn1 = id("donateBtn1");
 const donateBtn2 = id("donateBtn2");
 const donateBtn3 = id("donateBtn3");
+const donateBtn4 = id("donateBtn4");
+const donateBtn5 = id("donateBtn5");
 
 // Donate Titles
 const donateTitle1 = id("donateTitle1");
 const donateTitle2 = id("donateTitle2");
 const donateTitle3 = id("donateTitle3");
+const donateTitle4 = id("donateTitle4");
+const donateTitle5 = id("donateTitle5");
 
 // Balance
 const balance = id("balance");
@@ -83,6 +87,7 @@ donateBtn1.addEventListener("click", function () {
   successModal.showModal();
   id("inputAmount1").value = "";
 });
+
 // Add Donate Button 2
 donateBtn2.addEventListener("click", function () {
   const inputAmount2 = parseFloat(id("inputAmount2").value);
@@ -113,6 +118,7 @@ donateBtn2.addEventListener("click", function () {
   successModal.showModal();
   id("inputAmount2").value = "";
 });
+
 // Add Donate Button 3
 donateBtn3.addEventListener("click", function () {
   const inputAmount3 = parseFloat(id("inputAmount3").value);
@@ -142,4 +148,66 @@ donateBtn3.addEventListener("click", function () {
 
   successModal.showModal();
   id("inputAmount3").value = "";
+});
+
+// Add Donate Button 4
+donateBtn4.addEventListener("click", function () {
+  const inputAmount4 = parseFloat(id("inputAmount4").value);
+  const displayDonateAmount4 = parseFloat(id("displayDonateAmount4").innerText);
+
+  if (isNaN(inputAmount4)) {
+    alert("Please Enter Valid Amount");
+    return;
+  }
+  if (inputAmount4 <= 0) {
+    alert("Please Enter positive Amount");
+    return;
+  }
+  const newBalance = balance.innerText - inputAmount4;
+  if (newBalance < 0) {
+    alert("Insufficient Balance you can't donate");
+    return;
+  }
+  id("displayDonateAmount4").innerHTML = displayDonateAmount4 + inputAmount4;
+  balance.innerText = newBalance;
+
+  donateHistory.innerHTML += donateHistoryShow(
+    inputAmount4,
+    donateTitle4,
+    showDate()
+  );
+
+  successModal.showModal();
+  id("inputAmount4").value = "";
+});
+
+// Add Donate Button 5
+donateBtn5.addEventListener("click", function () {
+  const inputAmount5 = parseFloat(id("inputAmount5").value);
+  const displayDonateAmount5 = parseFloat(id("displayDonateAmount5").innerText);
+
+  if (isNaN(inputAmount5)) {
+    alert("Please Enter Valid Amount");
+    return;
+  }
+  if (inputAmount5 <= 0) {
+    alert("Please Enter positive Amount");
+    return;
+  }
+  const newBalance = balance.innerText - inputAmount5;
+  if (newBalance < 0) {
+    alert("Insufficient Balance you can't donate");
+    return;
+  }
+  id("displayDonateAmount5").innerHTML = displayDonateAmount5 + inputAmount5;
+  balance.innerText = newBalance;
+
+  donateHistory.innerHTML += donateHistoryShow(
+    inputAmount5,
+    donateTitle5,
+    showDate()
+  );
+
+  successModal.showModal();
+  id("inputAmount5").value = "";
 });
