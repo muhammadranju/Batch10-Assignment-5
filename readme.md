@@ -22,4 +22,4 @@ https://batch10-assignment-5.netlify.app
 
 ## Screenshots
 
-![Logo](./assets/project-ss.jpeg)
+![Logo](./assets/project-screenshort.jpeg)
