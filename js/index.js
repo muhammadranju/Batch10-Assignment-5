@@ -5,6 +5,13 @@ function id(id) {
 // All Cards Section and Donate History Section
 const cardContainer = id("cardContainer");
 const donateHistory = id("donateHistory");
+const errorId = id("errorId");
+
+const errorMessage = {
+  validAmount: "Please Enter Valid Amount",
+  positiveAmount: "Please Enter Positive Amount",
+  insufficientBalance: "Insufficient Balance You Can't Donate",
+};
 
 // Donate Buttons
 const donateBtn1 = id("donateBtn1");
@@ -63,18 +70,19 @@ donateBtn1.addEventListener("click", function () {
   const displayDonateAmount1 = Number(id("displayDonateAmount1").innerText);
 
   if (isNaN(inputAmount1)) {
-    alert("Please Enter Valid Amount");
-    return;
+    errorId.innerText = errorMessage.validAmount;
+    return errorModal.showModal();
   }
   if (inputAmount1 <= 0) {
-    alert("Please Enter positive Amount");
-    return;
+    errorId.innerText = errorMessage.positiveAmount;
+    return errorModal.showModal();
   }
   const newBalance = balance.innerText - inputAmount1;
   if (newBalance < 0) {
-    alert("Insufficient Balance you can't donate");
-    return;
+    errorId.innerText = errorMessage.insufficientBalance;
+    return errorModal.showModal();
   }
+
   id("displayDonateAmount1").innerHTML = displayDonateAmount1 + inputAmount1;
   balance.innerText = newBalance;
 
@@ -94,17 +102,17 @@ donateBtn2.addEventListener("click", function () {
   const displayDonateAmount2 = Number(id("displayDonateAmount2").innerText);
 
   if (isNaN(inputAmount2)) {
-    alert("Please Enter Valid Amount");
-    return;
+    errorId.innerText = errorMessage.validAmount;
+    return errorModal.showModal();
   }
   if (inputAmount2 <= 0) {
-    alert("Please Enter positive Amount");
-    return;
+    errorId.innerText = errorMessage.positiveAmount;
+    return errorModal.showModal();
   }
   const newBalance = balance.innerText - inputAmount2;
   if (newBalance < 0) {
-    alert("Insufficient Balance you can't donate");
-    return;
+    errorId.innerText = errorMessage.insufficientBalance;
+    return errorModal.showModal();
   }
   id("displayDonateAmount2").innerHTML = displayDonateAmount2 + inputAmount2;
   balance.innerText = newBalance;
@@ -125,17 +133,17 @@ donateBtn3.addEventListener("click", function () {
   const displayDonateAmount3 = Number(id("displayDonateAmount3").innerText);
 
   if (isNaN(inputAmount3)) {
-    alert("Please Enter Valid Amount");
-    return;
+    errorId.innerText = errorMessage.validAmount;
+    return errorModal.showModal();
   }
   if (inputAmount3 <= 0) {
-    alert("Please Enter positive Amount");
-    return;
+    errorId.innerText = errorMessage.positiveAmount;
+    return errorModal.showModal();
   }
   const newBalance = balance.innerText - inputAmount3;
   if (newBalance < 0) {
-    alert("Insufficient Balance you can't donate");
-    return;
+    errorId.innerText = errorMessage.insufficientBalance;
+    return errorModal.showModal();
   }
   id("displayDonateAmount3").innerHTML = displayDonateAmount3 + inputAmount3;
   balance.innerText = newBalance;
@@ -156,17 +164,17 @@ donateBtn4.addEventListener("click", function () {
   const displayDonateAmount4 = Number(id("displayDonateAmount4").innerText);
 
   if (isNaN(inputAmount4)) {
-    alert("Please Enter Valid Amount");
-    return;
+    errorId.innerText = errorMessage.validAmount;
+    return errorModal.showModal();
   }
   if (inputAmount4 <= 0) {
-    alert("Please Enter positive Amount");
-    return;
+    errorId.innerText = errorMessage.positiveAmount;
+    return errorModal.showModal();
   }
   const newBalance = balance.innerText - inputAmount4;
   if (newBalance < 0) {
-    alert("Insufficient Balance you can't donate");
-    return;
+    errorId.innerText = errorMessage.insufficientBalance;
+    return errorModal.showModal();
   }
   id("displayDonateAmount4").innerHTML = displayDonateAmount4 + inputAmount4;
   balance.innerText = newBalance;
@@ -187,17 +195,17 @@ donateBtn5.addEventListener("click", function () {
   const displayDonateAmount5 = Number(id("displayDonateAmount5").innerText);
 
   if (isNaN(inputAmount5)) {
-    alert("Please Enter Valid Amount");
-    return;
+    errorId.innerText = errorMessage.validAmount;
+    return errorModal.showModal();
   }
   if (inputAmount5 <= 0) {
-    alert("Please Enter positive Amount");
-    return;
+    errorId.innerText = errorMessage.positiveAmount;
+    return errorModal.showModal();
   }
   const newBalance = balance.innerText - inputAmount5;
   if (newBalance < 0) {
-    alert("Insufficient Balance you can't donate");
-    return;
+    errorId.innerText = errorMessage.insufficientBalance;
+    return errorModal.showModal();
   }
   id("displayDonateAmount5").innerHTML = displayDonateAmount5 + inputAmount5;
   balance.innerText = newBalance;

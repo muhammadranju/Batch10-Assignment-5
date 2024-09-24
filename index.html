@@ -321,10 +321,10 @@
 
     <!-- Footer Section -->
     <footer class="mt-20 pt-36 bg-bgColor sticky top-[100vh]"></footer>
-
+    <!-- Success Modal -->
     <dialog
       id="successModal"
-      class="modal modal-bottom sm:modal-middle flex justify-center items-center text-center"
+      class="modal modal-middle sm:modal-middle flex justify-center items-center text-center lg:px-0 px-3"
     >
       <div class="modal-box">
         <h3 class="text-3xl font-bold">Congratulations!</h3>
@@ -332,9 +332,31 @@
           <img src="./assets/coin.png" class="w-9" alt="" />
         </div>
         <p class="py-4 font-semibold">You Have Donated for Humankind</p>
-        <h4 class="font-bold text-xl">Successfully</h4>
+        <h4 class="font-bold text-2xl text-green-600">Successfully</h4>
         <form method="dialog" class="mt-5">
-          <button class="btn font-bold">Close Confirmation</button>
+          <button class="btn font-bold btn-outline btn-success">
+            Close Confirmation
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <!-- Error Modal-->
+    <dialog
+      id="errorModal"
+      class="modal modal-middle sm:modal-middle flex justify-center items-center text-center lg:px-0 px-3"
+    >
+      <div class="modal-box">
+        <h3 class="text-4xl font-bold text-red-500">Error Alert!</h3>
+        <div class="flex justify-center items-center mt-4 mb-4">
+          <img src="./assets/remove.png" class="w-12" alt="" />
+        </div>
+        <p class="py-4 font-semibold text-xl" id="errorId"></p>
+        <h4 class="font-bold text-2xl text-red-400">Failed</h4>
+        <form method="dialog" class="mt-5">
+          <button class="btn btn-outline btn-error font-bold">
+            Close Warning
+          </button>
         </form>
       </div>
     </dialog>
